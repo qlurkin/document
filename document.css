@@ -1,0 +1,86 @@
+@import url(https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css);
+
+body {
+	font-family: "Computer Modern Serif", serif;
+	counter-reset: section;
+	max-width: 40rem;
+	margin: auto;
+	font-size: 12pt;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+
+h1 {
+	font-weight: normal;
+	font-size: 2.5rem;
+	text-align: center;
+	margin: 3.236rem 0 2rem 0;
+	page-break-after: avoid;
+}
+
+h2, h3, h4, h5, h6 {
+	margin: 1.618rem 0 1rem 0;
+	page-break-after: avoid;
+}
+
+h2 {
+	font-size: 1.5rem;
+	counter-reset: subsection;
+}
+h2:before {
+	content: counter(section) "\0000a0\0000a0";
+	counter-increment: section;
+}
+h2.nocount:before {
+	content: none;
+	counter-increment: none;
+}
+
+h3 {
+	counter-reset: subsubsection;
+}
+h3:before {
+	content: counter(section) "." counter(subsection) "\0000a0\0000a0";
+	counter-increment: subsection;
+}
+h3.nocount:before {
+	content: none;
+	counter-increment: none;
+}
+
+h4:before {
+	content: counter(section) "." counter(subsection) "." counter(subsubsection) "\0000a0\0000a0";
+	counter-increment: subsubsection;
+}
+h4.nocount:before {
+	content: none;
+	counter-increment: none;
+}
+
+p {
+	text-align: justify;
+	margin: 1rem 0 1rem 0;
+	text-indent: 1.6rem;
+}
+
+ul {
+	list-style-type: none;
+}
+
+ul > li::before {
+	content: "\2014\a0";
+}
+
+figure {
+	max-width: 100%;
+	margin: 1rem auto 1rem auto;
+}
+
+figure > img {
+	width: 100%;
+}
+
+figure > figcaption {
+	text-align: center;
+}
