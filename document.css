@@ -1,5 +1,9 @@
 @import url(https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css);
 
+@page {
+	margin: 2cm;
+}
+
 body {
 	font-family: "Computer Modern Serif", serif;
 	counter-reset: section;
@@ -17,6 +21,12 @@ h1 {
 	text-align: center;
 	margin: 3.236rem 0 2rem 0;
 	page-break-after: avoid;
+}
+
+h1 > small {
+	display: block;
+	color: darkgray;
+	font-size: 0.6em;
 }
 
 h2, h3, h4, h5, h6 {
@@ -68,8 +78,15 @@ ul {
 	list-style-type: none;
 }
 
+ul > li {
+	position: relative;
+	margin: 0.6em 0;
+}
+
 ul > li::before {
 	content: "\2014\a0";
+	position: absolute;
+	left: -1.5em;
 }
 
 figure {
@@ -83,4 +100,16 @@ figure > img {
 
 figure > figcaption {
 	text-align: center;
+}
+
+.right {
+	text-align: right;
+}
+
+.break-before {
+	page-break-before: always;
+}
+
+.break-after {
+	page-break-after: always;
 }
