@@ -18,11 +18,11 @@
   },
   "homepage": "https://github.com/qlurkin/document#readme",
   "devDependencies": {
-    "@babel/core": "^7.4.5",
-    "parcel-bundler": "^1.12.3",
-    "babel-plugin-prismjs": "^1.0.2"
+    "@babel/core": "^7.5.5",
+    "babel-plugin-prismjs": "^1.1.1",
+    "parcel-bundler": "^1.12.3"
   },
   "dependencies": {
-    "prismjs": "^1.16.0"
+    "prismjs": "^1.17.1"
   }
 }
