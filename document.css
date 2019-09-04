@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Noto+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lora&display=swap');
 
 @page {
 	margin: 2cm;
 }
 
 body {
-	font-family:  'Noto Serif', serif;
+	font-family:  'Lora', serif;
 	counter-reset: section;
 	max-width: 40rem;
 	margin: auto;
