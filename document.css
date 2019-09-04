@@ -1,11 +1,11 @@
-@import url(https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css);
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif&display=swap');
 
 @page {
 	margin: 2cm;
 }
 
 body {
-	font-family: "Computer Modern Serif", serif;
+	font-family:  'Noto Serif', serif;
 	counter-reset: section;
 	max-width: 40rem;
 	margin: auto;
