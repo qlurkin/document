@@ -93,6 +93,10 @@ ol > li {
 	margin: 0.6em 0;
 }
 
+li {
+	text-align: justify;
+}
+
 figure {
 	max-width: 100%;
 	margin: 1rem auto 1rem auto;
@@ -116,4 +120,8 @@ figure > figcaption {
 
 .break-after {
 	page-break-after: always;
+}
+
+code.wrap {
+	white-space: pre-wrap !important;
 }
