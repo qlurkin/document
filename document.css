@@ -100,6 +100,7 @@ li {
 figure {
 	max-width: 100%;
 	margin: 1rem auto 1rem auto;
+	text-align: center;
 }
 
 figure > img {
