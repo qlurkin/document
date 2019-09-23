@@ -1,5 +1,5 @@
-/* PrismJS 1.15.0
-https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript+python&plugins=line-numbers+normalize-whitespace */
+/* PrismJS 1.17.1
+https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript+c+csharp+bash+basic+cpp+cmake+ruby+dart+markup-templating+docker+elm+git+glsl+go+graphql+less+java+scala+php+markdown+json+jsonp+kotlin+latex+scheme+lua+makefile+js-templates+matlab+typescript+nginx+objectivec+opencl+sql+powershell+processing+prolog+scss+python+r+jsx+rust+sass+shell-session+smalltalk+plsql+swift+yaml+pug+tsx+visual-basic+regex+vbnet+vim+wasm+xquery&plugins=line-numbers+normalize-whitespace */
 /**
  * prism.js default theme for JavaScript, CSS and HTML
  * Based on dabblet (http://dabblet.com)
@@ -12,6 +12,7 @@ pre[class*="language-"] {
 	background: none;
 	text-shadow: 0 1px white;
 	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
 	text-align: left;
 	white-space: pre;
 	word-spacing: normal;
