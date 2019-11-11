@@ -1,7 +1,14 @@
 import resolve from 'rollup-plugin-node-resolve'
 import postcss from 'rollup-plugin-postcss'
 import babel from 'rollup-plugin-babel'
+const importUrl = require('postcss-import-url');
 const url = require("postcss-url")
+
+const urlOptions = [
+	{
+		url: 'inline'
+	}
+]
 
 export default [
 	{
@@ -16,7 +23,7 @@ export default [
 				exclude: 'node_modules/**'
 			}),
 			postcss({
-				plugins: []
+				plugins: [importUrl({modernBrowser: true}), url({url: 'inline'})]
 			})
 		]
 	}

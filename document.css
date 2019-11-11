@@ -71,7 +71,6 @@ h4.nocount:before {
 p {
 	text-align: justify;
 	margin: 1rem 0 1rem 0;
-	text-indent: 1.6rem;
 }
 
 ul {
@@ -125,4 +124,12 @@ figure > figcaption {
 
 code.wrap {
 	white-space: pre-wrap !important;
+}
+
+.center {
+	text-align: center;
+}
+
+pre > code {
+	font-size: 80% !important;
 }
