@@ -26,5 +26,18 @@ export default [
 				plugins: [importUrl({modernBrowser: true}), url({url: 'inline'})]
 			})
 		]
+	},
+	{
+		input: 'document-lite.js',
+		output: {
+			file: 'dist/document-lite.js',
+			format: 'iife'
+		},
+		plugins: [
+			resolve(),
+			babel({
+				exclude: 'node_modules/**'
+			})
+		]
 	}
 ]

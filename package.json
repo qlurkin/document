@@ -4,7 +4,7 @@
   "description": "",
   "main": "document.js",
   "scripts": {
-    "build": "rollup -c"
+    "build": "rollup -c;cp document.css dist/document.css"
   },
   "repository": {
     "type": "git",

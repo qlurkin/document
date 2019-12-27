@@ -1,7 +1,11 @@
-export const loadScript = url => new Promise(resolve => {
+export const loadScript = url => new Promise((resolve, reject) => {
 	const script = document.createElement('script')
+	script.async = true
 	script.onload = () => {
 		resolve()
+	}
+	script.onerror = () => {
+		reject()
 	}
 	script.setAttribute("src", url)
 	document.head.insertBefore(script , null)
