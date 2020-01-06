@@ -1,5 +1,6 @@
 {
   "name": "document",
+  "type": "module",
   "version": "1.0.0",
   "description": "",
   "main": "document.js",
@@ -27,6 +28,13 @@
     "rollup-plugin-postcss": "^2.0.3"
   },
   "dependencies": {
-    "katex": "^0.11.1"
+    "app-root-path": "^3.0.0",
+    "jsdom": "^15.2.1",
+    "katex": "^0.11.1",
+    "mathjax-node-page": "^3.2.0",
+    "prismjs": "^1.17.1"
+  },
+  "bin": {
+    "build-document": "./build-document.js"
   }
 }

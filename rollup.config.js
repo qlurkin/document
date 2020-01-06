@@ -11,26 +11,26 @@ const urlOptions = [
 ]
 
 export default [
+	// {
+	// 	input: 'document.js',
+	// 	output: {
+	// 		file: 'dist/document.js',
+	// 		format: 'iife'
+	// 	},
+	// 	plugins: [ 
+	// 		resolve(),
+	// 		babel({
+	// 			exclude: 'node_modules/**'
+	// 		}),
+	// 		postcss({
+	// 			plugins: [importUrl({modernBrowser: true}), url({url: 'inline'})]
+	// 		})
+	// 	]
+	// },
 	{
 		input: 'document.js',
 		output: {
 			file: 'dist/document.js',
-			format: 'iife'
-		},
-		plugins: [ 
-			resolve(),
-			babel({
-				exclude: 'node_modules/**'
-			}),
-			postcss({
-				plugins: [importUrl({modernBrowser: true}), url({url: 'inline'})]
-			})
-		]
-	},
-	{
-		input: 'document-lite.js',
-		output: {
-			file: 'dist/document-lite.js',
 			format: 'iife'
 		},
 		plugins: [
