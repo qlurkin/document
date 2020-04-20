@@ -1,5 +1,6 @@
 import { loadCSS, loadScript } from './helpers'
 import { findLanguages } from './findLanguages.mjs'
+import loadMathjax from './loadMathjax'
 
 const loadPrism = () => {
 	const prismCdnUrl = language => `https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-${language}.js`
@@ -17,18 +18,6 @@ const loadPrism = () => {
 			Prism.highlightAll()
 		})
 	})
-}
-
-const loadMathjax = () => {
-	window.MathJax = {
-		loader: {
-			load: ['input/tex', 'output/svg']
-		},
-		tex: {},
-		svg: {}
-	};
-	loadScript('https://polyfill.io/v3/polyfill.min.js?features=es6')
-	.then(() => loadScript('https://cdn.jsdelivr.net/npm/mathjax@3.0.0/es5/startup.js'))
 }
 
 

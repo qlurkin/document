@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lora&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lora|Source+Code+Pro&display=swap');
 
 @page {
 	margin: 2cm;
@@ -130,6 +130,13 @@ code.wrap {
 	text-align: center;
 }
 
-pre > code {
-	font-size: 80% !important;
+body pre.prettyprint {
+	padding: 1rem;
+	border-radius: 2px;
+	font-size: 90%;
+	
+}
+
+code {
+	font-family: 'Source Code Pro', monospace;
 }

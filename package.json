@@ -5,7 +5,7 @@
   "description": "",
   "main": "document.js",
   "scripts": {
-    "build": "rollup -c;cp document.css dist/document.css"
+    "build": "rollup -c;cp document.css dist/document.css;cp atelier-estuary-light.css dist/atelier-estuary-light.css"
   },
   "repository": {
     "type": "git",

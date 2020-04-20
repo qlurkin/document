@@ -64,7 +64,12 @@ const formatCode = (documentJSDOM) => {
             const parent = codeElement.parentNode
             const language = getLanguage(codeElement)
             const code = normalizer.normalize(codeElement.innerHTML)
-            const html = Prism.highlight(code, Prism.languages[language], language)
+
+            let html
+            if(languages.includes(language))
+                html = Prism.highlight(code, Prism.languages[language], language)
+            else
+                html = code
             codeElement.classList.add(`language-${language}`)
             codeElement.classList.remove(`lang-${language}`)
             if(parent.tagName === 'PRE') {
@@ -75,7 +80,7 @@ const formatCode = (documentJSDOM) => {
                 codeElement.innerHTML = `${html}`
             }
         })
-
+        
         return Promise.resolve(documentJSDOM)
     })
 }
@@ -123,7 +128,6 @@ const formatMath = (documentJSDOM) => {
 
 removeDocumentScript(documentJSDOM)
 .then(documentJSDOM => addCSS(documentJSDOM, path.join(appRoot.path, 'document.css')))
-
 .then(documentJSDOM => formatCode(documentJSDOM))
 .then(documentJSDOM => formatMath(documentJSDOM))
 .then(documentJSDOM => {

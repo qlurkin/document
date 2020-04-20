@@ -14,5 +14,18 @@ export default [
 				exclude: 'node_modules/**'
 			})
 		]
+	},
+	{
+		input: 'doc.js',
+		output: {
+			file: 'dist/doc.js',
+			format: 'iife'
+		},
+		plugins: [
+			resolve(),
+			babel({
+				exclude: 'node_modules/**'
+			})
+		]
 	}
 ]

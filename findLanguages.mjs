@@ -15,7 +15,7 @@ export const findLanguages = (document) => {
     const languages = []
     findCode(document).forEach((element) => {
         const language = getLanguage(element)
-        if(language) {
+        if(language && language !== 'plain') {
             languages.push(language)
         }
     })
