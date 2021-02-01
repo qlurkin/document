@@ -5,16 +5,24 @@
 	  const script = document.createElement('script');
 	  script.async = true;
 
-	  script.onload = () => {
+	  const callback = () => {
 	    resolve();
 	  };
 
-	  script.onerror = () => {
-	    reject();
-	  };
+	  script.onload = callback;
+	  script.onreadystatechange = callback;
+	  script.setAttribute("src", url); //document.head.insertBefore(script , null)
 
-	  script.setAttribute("src", url);
-	  document.head.insertBefore(script, null);
+	  document.body.appendChild(script); // const script = document.createElement('script')
+	  // script.async = true
+	  // script.onload = () => {
+	  // 	resolve()
+	  // }
+	  // script.onerror = () => {
+	  // 	reject()
+	  // }
+	  // script.setAttribute("src", url)
+	  // document.head.insertBefore(script , null)
 	});
 	const loadCSS = url => new Promise(resolve => {
 	  const link = document.createElement('link');

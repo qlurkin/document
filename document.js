@@ -1,22 +1,14 @@
 import { loadCSS, loadScript } from './helpers'
-import { findLanguages } from './findLanguages.mjs'
 import loadMathjax from './loadMathjax'
 
 const loadPrism = () => {
-	const prismCdnUrl = language => `https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-${language}.js`
-
-	loadCSS('https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/themes/prism.min.css')
-	loadScript('https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js')
-	.then(() => loadScript('https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/normalize-whitespace/prism-normalize-whitespace.min.js'))
+	console.log('Load Prism.js')
+	loadCSS('https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css')
+	loadScript('https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/components/prism-core.min.js')
+	.then(() => loadScript('https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/normalize-whitespace/prism-normalize-whitespace.min.js'))
+	.then(() => loadScript('https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/autoloader/prism-autoloader.min.js'))
 	.then(() => {
-		const languages = findLanguages(document)
-		console.log('languages:', languages)
-		Promise.all(languages.map(language => 
-			loadScript(prismCdnUrl(language)).catch(() => {console.log(`${language} not found`)}))
-		).then(() => {
-			console.log("languages loaded")
-			Prism.highlightAll()
-		})
+		Prism.highlightAll()
 	})
 }
 
