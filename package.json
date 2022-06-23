@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "app-root-path": "^3.0.0",
-    "jsdom": "^15.2.1",
+    "jsdom": "^16.5.0",
     "katex": "^0.11.1",
     "mathjax-node-page": "^3.2.0",
     "prismjs": "^1.17.1"
